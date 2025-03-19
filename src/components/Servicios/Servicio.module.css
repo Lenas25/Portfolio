@@ -1,0 +1,12 @@
+
+
+.servicecard{
+  width: 100%;
+  border-bottom: 2px solid;
+  padding-bottom: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.servicecard:hover{
+  border-color: #D4C6F8;
+}
