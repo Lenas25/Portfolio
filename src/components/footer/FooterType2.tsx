@@ -9,7 +9,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const InfiniteScroll = () => {
   const itemStyle = "text-3xl font-bold";
