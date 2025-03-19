@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import ver from "@/../public/abrir.webp";
 import Link from "next/link";

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import profile from "@/../public/profile.webp";
 import ver from "@/../public/abrir.webp";

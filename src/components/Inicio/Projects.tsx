@@ -1,3 +1,5 @@
+"use client";
+
 import Routes from "@/constants/routes";
 import Link from "next/link";
 import ver from "@/../public/abrir.webp";

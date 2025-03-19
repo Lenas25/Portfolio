@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { StarComponent } from "../SobreMi/ConoceServicios";
 import Routes from "@/constants/routes";
