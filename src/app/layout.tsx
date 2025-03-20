@@ -1,6 +1,7 @@
 
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
+import { SidebarMobile } from "@/components";
 
 const redhat = Red_Hat_Display({
   variable: "--font-redhat",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={`${redhat.variable} antialiased`}
       >
+        <SidebarMobile />
         {children}
       </body>
     </html>
