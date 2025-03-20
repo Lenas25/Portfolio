@@ -1,7 +1,8 @@
-import { AnimatePresence } from "motion/react";
+"use client";
+
 import s from "./Servicio.module.css";
 import { FaChevronRight } from "react-icons/fa";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ServicioInfoProps {
   id: number;

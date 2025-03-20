@@ -1,11 +1,10 @@
-
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import { SidebarMobile } from "@/components";
 
 const redhat = Red_Hat_Display({
-  variable: "--font-redhat",
-  subsets: ["latin"],
+  style: ["normal", "italic"],
+  subsets: ["latin"]
 });
 
 export default function RootLayout({
@@ -15,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body
-        className={`${redhat.variable} antialiased`}
-      >
+      <body className={redhat.className}>
         <SidebarMobile />
         {children}
       </body>
