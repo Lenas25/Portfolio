@@ -149,10 +149,17 @@ export const Sidebar = () => {
   }, []);
 
   const handleClick = () => {
-    setOpenNav(!openNav);
-    setTimeout(() => {
-      setDelayedNav(!openNav);
-    }, 1000);
+    if (
+      window.matchMedia("(min-width: 768px)").matches
+    ) {
+      setOpenNav(true);
+      setDelayedNav(true);
+    } else {
+      setOpenNav(!openNav);
+      setTimeout(() => {
+        setDelayedNav(!openNav);
+      }, 1000);
+    }
   };
 
   const navVariants = {
