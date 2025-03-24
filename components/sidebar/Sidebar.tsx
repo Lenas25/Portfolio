@@ -2,10 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import Routes from "@/constants/routes";
 import { usePathname } from "next/navigation";
+
+interface AnimatedHamburgerButtonProps {
+  handleClick: () => void;
+  delayed: boolean;
+}
 
 const itemVariants = {
   open: {
@@ -45,14 +50,76 @@ const MenuItem = ({ href, text }: { href: string; text: string }) => {
   );
 };
 
+const AnimatedHamburgerButton = ({
+  handleClick,
+  delayed,
+}: AnimatedHamburgerButtonProps) => {
+  return (
+    <MotionConfig
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      }}>
+      <motion.button
+        className={`z-50 md:hidden cursor-pointer w-10 h-10 rounded-full hover:bg-purple/60 flex transition-colors duration-300 ${
+          delayed ? "fixed right-5" : "relative"
+        }`}
+        animate={delayed ? "open" : "closed"}
+        onClick={handleClick}>
+        <motion.span
+          style={{
+            left: "50%",
+            top: "30%",
+            y: "-50%",
+          }}
+          variants={{
+            open: { rotate: "-45deg", left: "47%", top: "37%" },
+            closed: { rotate: "0deg" },
+          }}
+          className="absolute w-3 h-1 bg-white rounded-full"
+        />
+        <motion.span
+          style={{
+            left: "50%",
+            top: "50%",
+            x: "-50%",
+            y: "-50%",
+          }}
+          variants={{
+            open: { rotate: "45deg" },
+            closed: { rotate: "0deg" },
+          }}
+          className="absolute w-6 h-1 bg-white rounded-full"
+        />
+        <motion.span
+          style={{
+            left: "50%",
+            bottom: "30%",
+            x: "-100%",
+            y: "50%",
+          }}
+          variants={{
+            open: { rotate: "-45deg", left: "54%", bottom: "38%" },
+            closed: { rotate: "0deg" },
+          }}
+          className="absolute w-3 h-1 bg-white rounded-full"
+        />
+      </motion.button>
+    </MotionConfig>
+  );
+};
+
 export const Sidebar = () => {
   const [openNav, setOpenNav] = useState(false);
   const [delayedNav, setDelayedNav] = useState(false);
 
   useEffect(() => {
-    // Create the handler function
     const handleResize = () => {
-      if (typeof window !== 'undefined' && window.matchMedia("(min-width: 768px)").matches) {
+      if (
+        typeof window !== "undefined" &&
+        window.matchMedia("(min-width: 768px)").matches
+      ) {
         setOpenNav(true);
         setDelayedNav(true);
       } else {
@@ -60,16 +127,12 @@ export const Sidebar = () => {
         setDelayedNav(false);
       }
     };
-  
-    // Only run on the client side
-    if (typeof window !== 'undefined') {
-      // Run once on initial mount
+
+    if (typeof window !== "undefined") {
       handleResize();
-      
-      // Set up the event listener
+
       window.addEventListener("resize", handleResize);
-      
-      // Clean up
+
       return () => {
         window.removeEventListener("resize", handleResize);
       };
@@ -77,12 +140,10 @@ export const Sidebar = () => {
   }, []);
 
   const handleClick = () => {
-    
-      setOpenNav(!openNav);
-      setTimeout(() => {
-        setDelayedNav(!openNav);
-      }, 1000);
-    
+    setOpenNav(!openNav);
+    setTimeout(() => {
+      setDelayedNav(!openNav);
+    }, 1000);
   };
 
   const navVariants = {
@@ -117,7 +178,7 @@ export const Sidebar = () => {
   return (
     <nav
       className="flex justify-between flex-wrap items-center p-5 gap-5 md:gap-3 
-     md:flex-wrap md:py-5 lg:justify-between lg:gap-10 lg:px-20">
+     md:flex-wrap md:py-5 lg:justify-between lg:gap-10 lg:px-10">
       <h2 className="text-2xl md:text-3xl">LenasDev</h2>
       <motion.div
         animate={delayedNav ? "open" : "closed"}
@@ -131,7 +192,12 @@ export const Sidebar = () => {
             delayedNav ? "flex" : "hidden"
           } `}>
           <motion.div variants={itemVariants} className="md:hidden">
-            <Image src="/logo.webp" alt="Logo LenasDev" width={100} height={100} />
+            <Image
+              src="/logo.webp"
+              alt="Logo LenasDev"
+              width={100}
+              height={100}
+            />
           </motion.div>
           {Object.entries(Routes)
             .slice(0, 4)
@@ -147,13 +213,7 @@ export const Sidebar = () => {
         md:px-6 md:py-2 md:text-xl">
         <span>Hablemos!</span>
       </a>
-      <button
-        type="button"
-        onClick={handleClick}
-        className={`size-6 z-50 md:hidden ${
-          delayedNav ? "fixed right-5" : "relative"
-        }`}>
-      </button>
+      <AnimatedHamburgerButton handleClick={handleClick} delayed={delayedNav} />
     </nav>
   );
 };

@@ -11,7 +11,7 @@ import {
 
 export const FooterType1 = () => {
   return (
-    <footer className="px-5 py-10 text-center md:w-[70%] z-10 mx-auto mt-5">
+    <footer className="px-5 py-10 text-center md:w-[70%] z-10 mx-auto">
       <h5 className="text-2xl font-semibold md:text-4xl">LenasDev</h5>
       <ul className="flex gap-3 justify-center items-center flex-wrap my-5 md:gap-6">
         {Object.entries(Routes)
@@ -50,12 +50,6 @@ export const FooterType1 = () => {
             <FaInstagram className="md:text-2xl" />
           </button>
         </div>
-      </div>
-      <div className="w-full flex justify-end">
-        <Link
-          href={Routes.inicio}
-          className="relative w-6 right-0 -top-44 block">
-        </Link>
       </div>
     </footer>
   );

@@ -5,8 +5,8 @@ const data = [
   {
     plus: false,
     title: 1,
-    subtitle: "año",
-    subtitle2: "de experiencia",
+    subtitle: "año de",
+    subtitle2: "experiencia",
   },
   {
     plus: true,

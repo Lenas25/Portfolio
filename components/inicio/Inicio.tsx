@@ -8,7 +8,7 @@ import { Servicios } from "./Servicios";
 
 export const Inicio = () => {
   return (
-    <main className="grid auto-rows-min md:grid-cols-4 lg:grid-cols-6 gap-4 p-5 md:py-20 md:px-10 xl:px-30">
+    <main className="grid auto-rows-min md:grid-cols-4 lg:grid-cols-6 gap-4 p-5 md:py-20 md:px-10 xl:py-10 xl:px-10">
       <Presentacion />
       <Datos />
       <ContactoCard />
