@@ -1,7 +1,6 @@
 "use client";
 
 import Routes from "@/constants/routes";
-import Lottie from "lottie-react";
 import Link from "next/link";
 import {
   FaDownload,
@@ -9,7 +8,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import animationData from "@/public/lottiescrollup.json";
 
 export const FooterType1 = () => {
   return (
@@ -57,7 +55,6 @@ export const FooterType1 = () => {
         <Link
           href={Routes.inicio}
           className="relative w-6 right-0 -top-44 block">
-          <Lottie animationData={animationData} autoplay={true} loop={true} />
         </Link>
       </div>
     </footer>
