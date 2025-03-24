@@ -1,4 +1,4 @@
-import { FooterType1 } from "@/components";
+import { FooterType1, Inicio } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="overflow-x-hidden h-full">
-      {/* <Inicio /> */}
+      <Inicio />
       <FooterType1 />
     </div>
   );
