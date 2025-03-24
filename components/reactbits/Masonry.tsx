@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo, useRef } from "react";
-import ver from "@/assets/abrir.webp";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -115,7 +114,7 @@ function Masonry({ data }: MasonryProps) {
                 className="-rotate-[33deg] size-16 md:size-28 group-hover:scale-105 group-hover:rotate-45 transition duration-300 ease-in-out opacity-50 group-hover:opacity-100"
               >
                 <Image
-                  src={ver}
+                  src="/abrir.webp"
                   alt="Estrella en un circulo con link para ver mas proyectos"
                   width={1200}
                   height={800}
