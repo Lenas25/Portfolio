@@ -29,12 +29,21 @@ const itemVariants = {
   },
 };
 
-const MenuItem = ({ href, text }: { href: string; text: string }) => {
+const MenuItem = ({
+  href,
+  text,
+  handleClick,
+}: {
+  href: string;
+  text: string;
+  handleClick: () => void;
+}) => {
   const path = usePathname();
 
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className={`${
         path === href
           ? "text-purple md:border-b-2 md:border-b-purple"
@@ -202,7 +211,12 @@ export const Sidebar = () => {
           {Object.entries(Routes)
             .slice(0, 4)
             .map(([key, value]) => (
-              <MenuItem key={key} href={value} text={key} />
+              <MenuItem
+                key={key}
+                href={value}
+                text={key}
+                handleClick={handleClick}
+              />
             ))}
         </motion.ul>
       </motion.div>
