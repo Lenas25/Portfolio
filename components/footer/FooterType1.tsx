@@ -9,7 +9,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import animationData from "@/../public/lottiescrollup.json";
+import animationData from "@/public/lottiescrollup.json";
 
 export const FooterType1 = () => {
   return (

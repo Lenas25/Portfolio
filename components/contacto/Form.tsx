@@ -5,7 +5,7 @@ import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Lottie from "lottie-react";
-import animationData from "@/../public/lottieloading.json";
+import animationData from "@/public/lottieloading.json";
 import { PiShareNetwork } from "react-icons/pi";
 
 interface IFormInput {

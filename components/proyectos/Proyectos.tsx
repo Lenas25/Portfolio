@@ -1,8 +1,8 @@
 
 
 import Image from "next/image";
-// import Masonry from "../reactbits/Masonry";
-// import { proyectos } from "@/data/projects";
+import Masonry from "../reactbits/Masonry";
+import { proyectos } from "@/data/projects";
 
 export const Proyectos = () => {
 
@@ -13,7 +13,7 @@ export const Proyectos = () => {
         <h1 className="text-2xl font-semibold text-center sm:text-5xl">MIS PROYECTOS</h1>
         <Image src="/starproject.webp" alt="Estrella de 10 puntas" className="max-w-[30px] sm:max-w-[100px]"/>
       </div>
-      {/* <Masonry data={proyectos} /> */}
+      <Masonry data={proyectos} />
     </main>
   );
 };

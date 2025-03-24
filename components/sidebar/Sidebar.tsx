@@ -3,7 +3,7 @@
 import Lottie from "lottie-react";
 import type { LottieRefCurrentProps } from "lottie-react";
 import Link from "next/link";
-import animationData from "@/../public/lottiemenu.json";
+import animationData from "@/public/lottiemenu.json";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
