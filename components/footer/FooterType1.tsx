@@ -1,7 +1,6 @@
 "use client";
 
 import Routes from "@/constants/routes";
-import Lottie from "lottie-react";
 import Link from "next/link";
 import {
   FaDownload,
@@ -9,25 +8,8 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import animationData from "@/public/lottiescrollup.json";
-import { useLottie } from "lottie-react";
-import { useEffect, useState } from "react";
 
 export const FooterType1 = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const defaultOptions = {
-    animationData: animationData,
-    loop: true,
-    autoplay: true,
-  };
-
-  const { View } = useLottie(defaultOptions);
-
   return (
     <footer className="px-5 py-10 text-center md:w-[70%] z-10 mx-auto mt-5">
       <h5 className="text-2xl font-semibold md:text-4xl">LenasDev</h5>
@@ -73,9 +55,9 @@ export const FooterType1 = () => {
         <Link
           href={Routes.inicio}
           className="relative w-6 right-0 -top-44 block">
-          {View}
         </Link>
       </div>
     </footer>
   );
 };
+
