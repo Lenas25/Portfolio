@@ -10,7 +10,10 @@ export const Servicios = () => {
       spotlightColor="rgba(255, 218, 250, 0.2)">
       <div className="w-full h-full my-auto max-h-[200px] md:max-w-[300px] container mx-auto bg-gradient-to-br from-black/50 to-purple/20 overflow-hidden rounded-tl-[70px] rounded-br-[70px] md:max-h-[170px] flex justify-center items-center z-10">
         <Image
-          src="/servicioshome.webp"
+          src="/servicioshome.webp" 
+          width={500}
+          height={500}
+          priority
           alt="foto de perfil"
           className="w-full object-cover h-full"
         />
@@ -28,7 +31,10 @@ export const Servicios = () => {
           <Link
             href={Routes.servicios}
             className="-rotate-[33deg] size-20 xl:size-24 group-hover:scale-105 group-hover:-rotate-45 transition duration-300 ease-in-out opacity-50 group-hover:opacity-100">
-            <Image src="/abrir.webp" alt="Ver proyectos" />
+            <Image src="/abrir.webp" alt="Ver proyectos" 
+          width={500}
+          height={500}
+          priority />
           </Link>
         </div>
       </div>

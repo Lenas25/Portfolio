@@ -16,7 +16,10 @@ export const Resumen = () => {
         <Image
           src="/profileIA.webp"
           alt="Foto de Perfil hecho con IA"
-          className="object-cover"
+          className="object-cover" 
+          width={500}
+          height={500}
+          priority
         />
       </div>
       <div className="flex gap-5 justify-center flex-col items-center text-center xl:text-right xl:justify-end xl:max-w-[800px] w-full">

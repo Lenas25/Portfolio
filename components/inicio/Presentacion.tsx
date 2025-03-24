@@ -11,6 +11,9 @@ export const Presentacion = () => {
       <div className="w-full h-full my-auto max-h-[300px] md:max-w-[300px] container mx-auto bg-gradient-to-br from-black/50 to-purple/20 overflow-hidden rounded-tl-[70px] rounded-br-[70px] z-10">
         <Image
           src="/profile.webp"
+          width={500}
+          height={500}
+          priority
           alt="foto de perfil"
           className="w-full object-cover h-full"
         />
