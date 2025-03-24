@@ -92,7 +92,7 @@ function Masonry({ data }: MasonryProps) {
             initial={{ x: item.x, y: item.y, width: item.width, height: item.height, opacity: 0 }}
             animate={{ x: item.x, y: item.y, width: item.width, height: item.height, opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
-            className="absolute p-[15px] [will-change:transform,width,height,opacity] rounded-lg flex flex-col justify-between group"
+            className="absolute lg:p-[15px] [will-change:transform,width,height,opacity] rounded-lg flex flex-col justify-between group"
           >
             <div
               className="flex-initial relative w-full h-full overflow-hidden uppercase text-[10px] leading-[10px] rounded-xl shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] group-hover:scale-110 transition duration-300 ease"
@@ -118,7 +118,7 @@ function Masonry({ data }: MasonryProps) {
                   alt="Estrella en un circulo con link para ver mas proyectos"
                   width={1200}
                   height={800}
-                  className="max-w-[100px]"
+                  className="lg:max-w-[100px]"
                 />
               </a>
             </div>
