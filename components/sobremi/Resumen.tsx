@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import profileIA from "@/../public/profileIA.webp";
 import Routes from "@/constants/routes";
 import Link from "next/link";
 import { FaCode } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import { SiPolestar } from "react-icons/si";
-// import RotatingText from "@/components/reactbits/RotatingText";
+import RotatingText from "@/components/reactbits/RotatingText";
 import { softskills } from "@/data/aboutme";
 
 export const Resumen = () => {
@@ -15,7 +14,7 @@ export const Resumen = () => {
     <section className="flex gap-10 flex-col xl:flex-row justify-center items-center w-full">
       <div className="w-full flex justify-center max-w-[600px] ">
         <Image
-          src={profileIA}
+          src="/profileIA.webp"
           alt="Foto de Perfil hecho con IA"
           className="object-cover"
         />
@@ -30,7 +29,7 @@ export const Resumen = () => {
           <h3 className="text-2xl font-semibold my-3 xl:text-right w-full lg:text-3xl flex items-center justify-center xl:justify-end gap-2 flex-wrap">
             Elena Suarez |
             <span>
-              {/* <RotatingText
+              <RotatingText
                 texts={[
                   " Software Engineering",
                   " Full Stack Developer",
@@ -46,7 +45,7 @@ export const Resumen = () => {
                 splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
                 rotationInterval={2000}
-              /> */}
+              />
             </span>
           </h3>
           <p className="md:text-xl xl:text-2xl">
