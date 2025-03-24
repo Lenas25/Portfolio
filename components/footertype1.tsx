@@ -11,8 +11,14 @@ import {
 } from "react-icons/fa";
 import animationData from "@/public/lottiescrollup.json";
 import { useLottie } from "lottie-react";
+import { useEffect, useState } from "react";
 
 export const FooterType1 = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const defaultOptions = {
     animationData: animationData,
@@ -21,7 +27,6 @@ export const FooterType1 = () => {
   };
 
   const { View } = useLottie(defaultOptions);
-
 
   return (
     <footer className="px-5 py-10 text-center md:w-[70%] z-10 mx-auto mt-5">
@@ -68,10 +73,9 @@ export const FooterType1 = () => {
         <Link
           href={Routes.inicio}
           className="relative w-6 right-0 -top-44 block">
-            {View}
+          {View}
         </Link>
       </div>
     </footer>
   );
 };
-
