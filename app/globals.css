@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
+@theme{
+  --color-background: #01080F;
+  --color-foreground: #FBFBFE;
+  --color-black: #01080F;
+  --color-white: #FBFBFE;
+  --color-gray: #6d6d6d;
+  --color-purple: #D4C6F8;
+  --color-purpleLight: #e1dafa;
+  --color-purpleText: #37284d;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #01080F;
+  --foreground: #FBFBFE;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.contact-button:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-button span {
+  position: relative;
+  z-index: 0;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 110%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(
+    82.3deg,
+    #e8e9f7 10.8%,
+    #a7a1d8 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.contact-info{
+  @apply flex items-center gap-5 mb-3;
+}
+
+.contact-info > svg {
+  @apply p-3 w-14 h-14 bg-zinc-700 rounded-lg;
+}
+
+.social-info{
+  @apply flex items-center gap-5 outline-1 rounded-lg py-3 px-5 w-full sm:max-w-full flex-wrap justify-between;
+}
+
+.social-info > div{
+  @apply flex gap-5 items-center;
+}
+
+.social-info > div > div > p{
+  @apply lg:text-xl font-bold;
+}
+
+.social-info > div > div > span{
+  @apply text-sm text-gray;
+}
+
+.social-link{
+  @apply transition-all text-xl lg:text-2xl;
+}
+
+.social-info > div > svg{
+  @apply transition-all duration-300;
+}
+
+.social-info:hover .social-link{
+  @apply rotate-45;
+}
+
+.social-info:hover > div > svg {
+  @apply scale-110;
+}
+
+.contact-input{
+  @apply px-3 py-2 w-full md:text-xl bg-[#21212180] rounded-lg cursor-pointer text-white focus:outline focus:outline-purple focus:bg-transparent transition duration-300 ease-in-out;
 }
