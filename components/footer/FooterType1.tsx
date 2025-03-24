@@ -1,4 +1,5 @@
-"use client";
+'use client'
+import React from "react";
 
 import Routes from "@/constants/routes";
 import Lottie from "lottie-react";
