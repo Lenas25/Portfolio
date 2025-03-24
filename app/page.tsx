@@ -4,7 +4,7 @@ import { Inicio } from "@/components/inicio/Inicio";
 export default function Home() {
   return (
     <div className="overflow-x-hidden h-full">
-      <Inicio />
+      {/* <Inicio /> */}
       <FooterType1 />
     </div>
   );
