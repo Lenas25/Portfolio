@@ -1,8 +1,8 @@
 
-
 import Image from "next/image";
 import Masonry from "../reactbits/Masonry";
 import { proyectos } from "@/data/projects";
+import ShinyText from "../reactbits/ShinyText";
 
 export const Proyectos = () => {
 
@@ -16,6 +16,13 @@ export const Proyectos = () => {
         <Image src="/starproject.webp" alt="Estrella de 10 puntas" className="max-w-[30px] sm:max-w-[100px]" 
           width={1200}
           height={800}/>
+      </div>
+      <div className="w-full text-center mb-5">
+        <ShinyText 
+        text="¡Haz clic para ver más proyectos!" 
+        disabled={false} 
+        speed={3}
+      />
       </div>
       <Masonry data={proyectos} />
     </main>

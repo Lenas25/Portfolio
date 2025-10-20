@@ -15,12 +15,12 @@ export const Skills = () => {
       <ul className="content-center flex gap-5 justify-center flex-wrap mb-10">
         <li className={`text-2xl hover:scale-110 transition duration-300 ${activeItem === 1 && "text-purpleLight scale-110"}`}>
           <button type="button" onClick={()=>{handleActiveItem(1)}}>
-          BackEnd
+          FrontEnd
           </button>
         </li>
         <li className={`text-2xl hover:scale-110 transition duration-300 ${activeItem === 2 && "text-purpleLight scale-110"}`}>
           <button type="button" onClick={()=>{handleActiveItem(2)}}>
-          FrontEnd
+          BackEnd
           </button>
         </li>
         <li className={`text-2xl hover:scale-110 transition duration-300 ${activeItem === 3 && "text-purpleLight scale-110"}`}>

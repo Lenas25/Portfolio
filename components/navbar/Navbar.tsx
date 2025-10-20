@@ -119,7 +119,7 @@ const AnimatedHamburgerButton = ({
   );
 };
 
-export const Sidebar = () => {
+export const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const [delayedNav, setDelayedNav] = useState(false);
 

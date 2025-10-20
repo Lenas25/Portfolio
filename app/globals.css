@@ -9,7 +9,18 @@
   --color-purple: #D4C6F8;
   --color-purpleLight: #e1dafa;
   --color-purpleText: #37284d;
+  --animate-shine: shine 5s linear infinite;
 }
+
+@keyframes shine {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: -100%;
+  }
+}
+
 
 :root {
   --background: #01080F;

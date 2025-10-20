@@ -19,7 +19,7 @@ export const Presentacion = () => {
       </div>
       <div className="flex flex-col justify-center items-center z-10">
         <div className="text-black space-y-2">
-          <h3 className="font-semibold lg:text-2xl">A WEB DEVELOPER</h3>
+          <h3 className="font-semibold lg:text-2xl">A FULL STACK DEVELOPER</h3>
           <h1 className="text-3xl font-semibold md:text-7xl">Elena Suarez.</h1>
           <p className="text-md pr-12 md:pr-0 lg:text-xl md:text-lg">
             Soy una desarolladora web en Lima, Perú.{" "}

@@ -69,7 +69,8 @@ export const Resumen = () => {
         </div>
         <div className="flex gap-5 items-center justify-center flex-wrap w-full xl:justify-end">
           <a
-            href="https://drive.google.com/file/d/1UrZ3UFCLuRn3V2YcrJ1BpX5YDPBz4SPk/view?usp=sharing"
+            href="/CV Elena.pdf"
+            download="CV Elena.pdf"
             className="flex gap-2 items-center bg-purpleText rounded-md py-2 px-5 w-full md:w-auto justify-center transition duration-300 hover:bg-[#37284d79] md:text-xl lg:py-3 lg:px-10">
             <TbFileCv className="md:text-2xl" />
             Descargar CV

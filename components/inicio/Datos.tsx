@@ -29,7 +29,6 @@ export const Datos = () => {
       <div className="flex gap-3 flex-col justify-center md:flex-row w-full xl:gap-5 z-10">
         {data.map((item, index) => (
           <div
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             className="bg-purple/20 p-3 rounded-lg text-center md:p-5 flex justify-center items-center flex-col gap-3 md:w-1/2">
             <h4 className="text-black font-extrabold text-3xl md:text-5xl">

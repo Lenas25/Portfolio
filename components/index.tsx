@@ -5,7 +5,7 @@ export { Contacto as ContactoCard } from './inicio/Contacto';
 export { Inicio } from './inicio/Inicio';
 export { Proyectos } from './proyectos/Proyectos';
 export { Servicio } from './servicios/Servicio';
-export { Sidebar } from './sidebar/Sidebar';
+export { Navbar } from './navbar/Navbar';
 export { Experiencia } from './sobremi/Experiencia';
 export { ConoceServicios } from './sobremi/ConoceServicios';
 export { Resumen } from './sobremi/Resumen';

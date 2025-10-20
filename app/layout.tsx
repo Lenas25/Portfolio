@@ -2,7 +2,7 @@
 
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components";
+import { Navbar } from "@/components";
 
 const redhat = Red_Hat_Display({
   style: ["normal", "italic"],
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${redhat.className}`}>
-        <Sidebar/>
+        <Navbar/>
         {children}
       </body>
     </html>
